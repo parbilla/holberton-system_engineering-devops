@@ -1,2 +1,2 @@
 #!/bin/bash
-find ./. -type d -name -iname | wc -la
+find ./. -type d -name -iname | wc -l
