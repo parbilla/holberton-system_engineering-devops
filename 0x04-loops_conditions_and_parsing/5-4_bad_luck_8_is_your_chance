@@ -1,6 +1,7 @@
 #!/usr/bin/env bash
 # This script is displaying "Holberton School" 10 times
-# but for the 9th iteration, displays Holberton School and then Hi on a new line
+# but displays bad luck for the 4th loop iteration
+# and displays good luck for the 8th loop iteration
 i=0
 while [ $i -le 9 ]
 do
