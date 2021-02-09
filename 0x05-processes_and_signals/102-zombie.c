@@ -32,7 +32,7 @@ int main(void)
 	{
 		zombie_pid = fork();
 		if (zombie_pid == 0)
-			exit(-1);
+			exit(0);
 		printf("Zombie process created, PID: %d\n", zombie_pid);
 	}
 	infinite_while();
