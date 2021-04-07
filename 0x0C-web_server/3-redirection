@@ -1,10 +1,13 @@
 #!/usr/bin/env bash
 # Bash script to configure your Nginx server so that /redirect_me is redirecting to another page
 
-apt-get -y update
-apt-get -y install nginx
-#sudo chown -R $USER:$USER /var/www/html
-echo "Holberton School" > /var/www/html/index.html
-string="_;\n\n\trewrite \/redirect_me https:\/\/www.youtube.com\/watch?v=QH2-TGUlwu4 permanent;"
-sed -i "s/_;/$string/" /etc/nginx/sites-available/default
-service nginx restart
+sudo apt-get update
+sudo apt-get -y install nginx
+sudo service nginx start
+echo "Holberton School" /var/www/html/index.nginx-debian.html
+file="/etc/nginx/sites-available/default"
+sudo chmod +w $file
+cmd="location /redirect_me {\nreturn 301 https://www.youtube.com/watch?v=QH2-TGUlwu4;\n}"
+sudo sed -i "36i $cmd" $file
+sudo service nginx restart
+
