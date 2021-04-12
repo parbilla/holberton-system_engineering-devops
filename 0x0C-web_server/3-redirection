@@ -4,10 +4,9 @@
 sudo apt-get update
 sudo apt-get -y install nginx
 sudo service nginx start
-echo "Holberton School" > /var/www/html/index.nginx-debian.html
-file="/etc/nginx/sites-available/default"
-sudo chmod +w $file
-cmd="location /redirect_me {\nreturn 301 https://www.youtube.com/watch?v=QH2-TGUlwu4;\n}"
-sudo sed -i "36i $cmd" $file
+red="\\\trewrite ^/redirect_me https://www.youtube.com/watch?v=QH2-TGUlwu4 permanent;"
+sudo sed -i "36i $red" /etc/nginx/sites-available/default
 sudo service nginx restart
+sudo service nginx reload
+
 
