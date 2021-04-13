@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+# Script with the minimum number of commands to automate your fix
+sudo ln -s /etc/nginx/sites-available/default /etc/nginx/sites-enabled/default
