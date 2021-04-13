@@ -13,4 +13,5 @@ backend web-backend
         balance roundrobin
         server 2116-web-01 35.227.63.112:80 check
         server 2116-web-02 34.75.232.226:80 check" >> $FILE
+echo "ENABLED=1" >> /etc/default/haproxy
 sudo service haproxy restart
