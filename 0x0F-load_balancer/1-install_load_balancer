@@ -4,7 +4,8 @@ sudo apt-get -y update
 sudo apt-get -y upgrade
 sudo apt-get -y install haproxy=1.6.\*
 FILE="/etc/haproxy/haproxy.cfg"
-echo "frontend firstbalance
+echo "
+frontend firstbalance
         bind *:80
         option forwardfor
         default_backend webservers
