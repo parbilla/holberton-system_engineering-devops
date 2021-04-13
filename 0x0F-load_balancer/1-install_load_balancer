@@ -9,6 +9,7 @@ frontend front
         bind *:80
         mode http
         default_backend backend-web
+
 backend backend-web
         balance roundrobin
         server 2116-web-01 35.227.63.112:80 check
