@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 # Script to configure HAproxy on your server load balancer
 sudo apt update
-sudo apt -y upgrade
+sudo apt upgrade
 sudo apt -y install haproxy=1.6.\*
 FILE="/etc/haproxy/haproxy.cfg"
 sudo echo "
