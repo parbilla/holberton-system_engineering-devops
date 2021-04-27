@@ -2,5 +2,5 @@
 # Script that does task #1
 pkill apache2
 chmod 644 /etc/nginx/nginx.conf
-sed -i 's/80 default_server/8080 default_server/' /etc/nginx/sites-available/default
+sed -i 's/80 default_/8080 default_/' /etc/nginx/sites-available/default
 sudo -u nginx service nginx restart
