@@ -17,13 +17,12 @@ if __name__ == '__main__':
     # now we will open a file for writing
     # create the csv writer object
     new_list = []
-    new_dict = {}
     for key in t:
-        new_dict["username"] = r.get('username')
+        new_dict = {}
         new_dict["task"] = key.get('title')
         new_dict["completed"] = key.get('completed')
+        new_dict["username"] = r.get('username')
         new_list.append(new_dict)
-
     json_dict = {}
     json_dict[USER_ID] = new_list
     with open("{}.json".format(USER_ID), 'w') as jsonfile:
