@@ -19,7 +19,7 @@ if __name__ == '__main__':
     # now we will open a file for writing
     data_file = open("{}.csv".format(argv[1]), 'w')
     # create the csv writer object
-    csv_writer = csv.writer(data_file)
+    csv_writer = csv.writer(data_file, quoting=csv.QUOTE_ALL)
     for key in t:
         TASK_COMPLETED_STATUS = key.get('completed')
         TASK_TITLE = key.get('title')
