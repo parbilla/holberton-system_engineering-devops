@@ -10,7 +10,7 @@ headers = {'User-Agent': 'Mozilla/5.0 (Windows NT 6.1; Win64; x64)'}
 def recurse(subreddit, hot_list=[], cont=0):
     """Returns all hot articles"""
     req = requests.get(url.format(subreddit), headers=headers)
-    if req.status_code == 200:
+    if req.status_code != 404:
         arts = req.json()['data']['children']
         if cont == len(arts) - 1:
             return hot_list
